@@ -30,3 +30,6 @@
         .drop-down:hover .dropdown-content {
             display: block;
         }
+        .navbar .active {
+            background-color: red;
+        }

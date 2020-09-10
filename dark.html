@@ -2,43 +2,28 @@
 <html>
     <head>
         <title>Page Title</title>
-        <style>
-        body {
-            background-color:#30302f
-        }
-        h1 {
-            color:#FFFFFF;font-size:60px;text-align:center
-        }
-        p {
-            color:#FFFFFF
-        }
-        b {
-            color:#FFFFFF
-        }
-        i {
-            color:#FFFFFF
-        }
-        a {
-            color:#FFFFFF
-        }
-        ul {
-            color:#FFFFFF
-        }
-        ol {
-            color:#FFFFFF
-        }
-        .headerRow {
-            background-color:orange
-        }
-        .oddRow {
-            background-color:lightBlue
-        }
-        .evenRow {
-            background-color:orange
-        }
-        </style>
+        <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
-    <body>   
+    <body> 
+
+        <ul class="navbar">
+            <li class="active"><a href="dark.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contactme.html">Contact Me</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li class="drop-down">
+                <a href="#">Projects</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Project 1</a></li>
+                    <li><a href="#">Project 2</a></li>
+                    <li><a href="#">Project 3</a></li>
+                    <li><a href="#">Project 4</a></li>
+                    <li><a href="#">Project 5</a></li>
+                </ul>
+            </li>
+        </ul>
+          
         <h1>My First Project</h1>
         <p>My first paragraph.</p>
         <b>Bold</b>
