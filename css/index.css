@@ -31,3 +31,9 @@
         .evenRow {
             background-color:orange
         }
+        .whitetext {
+            color:white;
+        }
+        .tabletext {
+            text-align:center;
+        }
