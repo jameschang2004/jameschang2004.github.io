@@ -1,11 +1,12 @@
 
-body {
-    background-color: #30302f;
-    color: white;
-}
-h1 {
-    color: Lightskyblue;
-}
-h3 {
-    color:Lightskyblue;
-}
+        body {
+            background-color: #30302f;
+            color: white;
+            font-size: 16px;
+        }
+        h1 {
+            color: Lightskyblue;
+        }
+        h3 {
+            color:Lightskyblue;
+        }
