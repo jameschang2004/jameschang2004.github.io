@@ -4,34 +4,7 @@
             font-size: 16px;
         }
         h1 {
-            color:#FFFFFF;font-size:60px;text-align:center
-        }
-        p {
-            color:#FFFFFF
-        }
-        b {
-            color:#FFFFFF
-        }
-        i {
-            color:#FFFFFF
-        }
-        a {
-            color:#FFFFFF
-        }
-        ul {
-            color:#FFFFFF
-        }
-        ol {
-            color:#FFFFFF
-        }
-        .headerRow {
-            background-color:orange
-        }
-        .oddRow {
-            background-color:lightBlue
-        }
-        .evenRow {
-            background-color:orange
+            color:Lightskyblue;font-size:60px;text-align:center
         }
         .whitetext {
             color:white;
@@ -40,7 +13,4 @@
         table {
             margin-left:auto;
             margin-right:auto;
-        }
-        h1 {
-            color:Lightskyblue;
         }
