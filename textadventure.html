@@ -10,32 +10,59 @@
                 right: 0px;
                 top: 90px;
                 bottom: 0px;
-                background-color: #30302f;
+                background-color: red;
             }
 
             #left_pane {
-                background-color: LightSkyBlue;
+                background-color: green;
                 height: 100%;
                 width: 56%;
                 float: left;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             #right_pane {
-                background-color: #30302f;
+                background-color: blue;
                 height: 100%;
                 width: 44%;
                 float: right;
             }
 
             #story_text {
-                background-color: LightGray;
-                height: 80%
+                background-color: yellow;
+                height: 80%;
+                color: red;
+                font-weight: bold;
             }
 
             #button_choices {
-                background-color: LightYellow;
+                background-color: pink;
                 height: 20%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
+
+            #story_img {
+                max-height: 100%;
+                max-width: 100%;
+                width: auto;
+                height: auto;
+            }
+
+            .buttons {
+                text-decoration: none;
+                color: white;
+                background-color: black;
+                padding: 10px;
+                border-radius: 8px;
+                font-size: 16px;
+                margin: 10px;
+            }
+
+        
         </style>
     </head>
     <body>
@@ -58,10 +85,23 @@
         </ul>
 
     <div id="container">
-        <div id="left_pane"></div>
+        <div id="left_pane">
+            <img id="story_img" src="images/kitten.jpg"/>
+
+
+        </div>
         <div id="right_pane">
-            <div id="story_text"></div>
-            <div id="button_choices"></div>        
+            <div id="story_text">
+                <p>Tucker's Journey To Twitch Fame</p>
+                <p>You just discover the streaming platform Twitch</p>
+                <p>Do you want to stream?</p>
+            </div>
+            <div id="button_choices">
+            
+                <a class="buttons" href="">Yes</a>
+                <a class="buttons" href="">No</a>
+
+            </div>        
         </div>
     </div>      
 
