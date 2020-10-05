@@ -92,18 +92,38 @@
         </div>
         <div id="right_pane">
             <div id="story_text">
-                <p>Tucker's Journey To Twitch Fame</p>
-                <p>You just discover the streaming platform Twitch</p>
-                <p>Do you want to stream?</p>
+                <p id="p1">Tucker's Journey To Twitch Fame</p>
+                <p id="p2">You just discover the streaming platform Twitch</p>
+                <p id="p3">Do you want to stream?</p>
             </div>
             <div id="button_choices">
             
-                <a class="buttons" href="">Yes</a>
-                <a class="buttons" href="">No</a>
+                <a id="b1" class="buttons" href="" onclick="bclick(1)">Yes</a>
+                <a id="b2" class="buttons" href="" onclick="bclick(2)">No</a>
 
             </div>        
         </div>
     </div>      
 
+    <script>
+        var b1 = document.getElementById("b1");
+        var b2 = document.getElementById("b2");
+        var img = document.getElementById("story_img");
+        var p1 = document.getElementById("p1");
+        var p2 = document.getElementById("p2");
+        var p3 = document.getElementById("p3");
+        var state = "intro";
+        intro();
+
+        function intro (){
+            img.src = "images/blackcat.jpg";
+            b1.innerHTML = "Start Your Stream";
+            b2.innerHTML = "Don't Start Your Stream";
+            p1.innerHTML = "Welcome to my adventure. Your name is Tucker.";
+            p2.innerHTML = "Would you like to start your streaming career?";
+            p3.style.display = "none";
+        }
+
+    </script>
     </body>
 </html>
