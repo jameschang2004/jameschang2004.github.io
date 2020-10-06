@@ -116,12 +116,36 @@
         intro();
 
         function intro (){
-            img.src = "images/blackcat.jpg";
+            img.src = "images/twitch.jpg";
             b1.innerHTML = "Start Your Stream";
             b2.innerHTML = "Don't Start Your Stream";
             p1.innerHTML = "Welcome to my adventure. Your name is Tucker.";
             p2.innerHTML = "Would you like to start your streaming career?";
             p3.style.display = "none";
+        }
+
+        function startTheStream (){
+            img.src = "images/startthestream.jpg";
+            p1.innerHTML = "You start your stream and begin your career as a twitch streamer."
+            p2.innerHTML = "Although you had high hopes when you started the stream, nobody joins your stream."
+            p3.innerHTML = "Would you like to continue the stream?"
+            b1.innerHTML = "Yes"
+            b2.innerHTML = "No"
+        }
+
+        ///State Machine
+        function bclick(button){
+            if (state == "intro"){
+                if (button == 1){
+                    startTheStream();
+                    state="startTheStream";
+                }
+                else if(button == 2){
+                    gameOver();
+                    state = "gameOver"
+                }
+            }
+
         }
 
     </script>
