@@ -98,8 +98,8 @@
             </div>
             <div id="button_choices">
             
-                <a id="b1" class="buttons" href="" onclick="bclick(1)">Yes</a>
-                <a id="b2" class="buttons" href="" onclick="bclick(2)">No</a>
+                <a id="b1" class="buttons" href="#" onclick="bclick(1)">Yes</a>
+                <a id="b2" class="buttons" href="#" onclick="bclick(2)">No</a>
 
             </div>        
         </div>
@@ -133,6 +133,15 @@
             b2.innerHTML = "No"
         }
 
+        function continueStream (){
+            img.src = "images/continuestream.jpg";
+            p1.innerHTML = "You continue your stream even when you have no viewers."
+            p2.innerHTML = "Zenals joins your stream."
+            p3.innerHTML = "Would you like to play with him?"
+            b1.innerHTML = "Yes"
+            b2.innerHTML = "No"
+        }
+
         ///State Machine
         function bclick(button){
             if (state == "intro"){
@@ -145,7 +154,16 @@
                     state = "gameOver"
                 }
             }
-
+            else if(state == "startTheStream"){
+                if (button == 1){
+                    continueStream();
+                    state = "continueStream";
+                }
+                else if(button == 2){
+                    stopTheStream();
+                    state = "stopTheStream"
+                }
+            }
         }
 
     </script>
