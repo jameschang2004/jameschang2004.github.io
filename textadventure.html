@@ -4,7 +4,7 @@
         <title>Text Adventure</title>
         <link rel="stylesheet" type="text/css" href="css/navbar.css" />
         <style>
-            #container {
+	    #container {
                 position: absolute;
                 left: 0px;
                 right: 0px;
@@ -31,25 +31,30 @@
             }
 
             #story_text {
-                background-color: yellow;
-                height: 80%;
-                color: red;
+                background-color: #30302f;
+                height: 100%;
+                color: white;
                 font-weight: bold;
+                position: absolute;
             }
 
-            #button_choices {
-                background-color: pink;
-                height: 20%;
+            #button_choices{
+                position: absolute;
+                bottom: 0px;
+                left: 56%;
+                right:0px;
+                height: 60px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                background-color: LightSkyBlue;
             }
 
             #story_img {
-                max-height: 100%;
-                max-width: 100%;
-                width: auto;
-                height: auto;
+                max-height:100%;
+                max-width:100%;
+                width:100%;
+                height:100%;
             }
 
             .buttons {
@@ -121,6 +126,7 @@
             b2.innerHTML = "No, Do Not Start The Stream";
             p1.innerHTML = "Welcome to my adventure. Your name is Tucker.";
             p2.innerHTML = "Young Tucker decides to browse the internet one day and discovers this really really really cool website called Twitch. He wonders if he should become a streamer.";
+            p3.innerHTML = "Does Tucker want to stream?"
             b2.style.display = "block"
         }
 
@@ -145,10 +151,12 @@
         }
         
         function gameOverTwo (){
-            img.src = "images/gameover.png";
+            img.src = "images/gameover.jpg";
             p1.innerHTML = "How could you give up so early?"
             p2.innerHTML = "With a weak mental like that you will never be famous. You are just a loser who gave up without putting in the effort."
             p3.innerHTML = "Click button to restart."
+            b1.innerHTML = "Restart"
+            b2.style.display = "none"
         }
 
         function playZenals (){
@@ -161,8 +169,17 @@
             b2.style.display = "block"
         }
 
+        function noZenals (){
+            img.src = "images/gameover.jpg";
+            p1.innerHTML = "Tucker decides not to play with some lame kid called Zenals."
+            p2.innerHTML = "Enraged by the fact that you called him lame, Zenals decides to join your bitter rivals Micky's stream, and you are quickly overshadowed falling into irrelevance."
+            p3.innerHTML = "Click button to restart."
+            b1.innerHTML = "Restart"
+            b2.style.display = "none"
+        }
+
         function gameOver (){
-            img.src = "images/gameover.png";
+            img.src = "images/gameover.jpg";
             p1.innerHTML = "What are you even doing here then?"
             p2.innerHTML = "Leave, you are failure who gave up before even trying. You will never be a successful streamer."
             p3.innerHTML = "Click button to restart."
@@ -192,13 +209,29 @@
                     state = "gameOverTwo"
                 }
             }
+            else if(state == "gameOverTwo"){
+                if (button == 1){
+                    intro();
+                    state = "intro";
+                }
+            }
             else if(state == "continueStream"){
                 if (button == 1){
                     playZenals();
                     state = "playZenals";
                 }
+                if (button == 2){
+                    noZenals();
+                    state = "noZenals";
+                }
             }
             else if(state == "gameOver"){
+                if (button == 1){
+                    intro();
+                    state = "intro";
+                }
+            }
+            else if(state == "noZenals"){
                 if (button == 1){
                     intro();
                     state = "intro";
