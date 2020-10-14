@@ -26,6 +26,7 @@
             background-color: black;
             display: none;
             position: absolute;
+            z-index: 1;
         }
         .drop-down:hover .dropdown-content {
             display: block;

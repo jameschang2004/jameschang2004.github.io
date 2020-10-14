@@ -94,7 +94,7 @@
             <div id="story_text">
                 <p id="p1">Tucker's Journey To Twitch Fame</p>
                 <p id="p2">You just discover the streaming platform Twitch</p>
-                <p id="p3">Do you want to stream?</p>
+                <p id="p3">Does Tucker want to stream.</p>
             </div>
             <div id="button_choices">
             
@@ -117,29 +117,57 @@
 
         function intro (){
             img.src = "images/twitch.jpg";
-            b1.innerHTML = "Start Your Stream";
-            b2.innerHTML = "Don't Start Your Stream";
+            b1.innerHTML = "Yes, Start The Stream";
+            b2.innerHTML = "No, Do Not Start The Stream";
             p1.innerHTML = "Welcome to my adventure. Your name is Tucker.";
-            p2.innerHTML = "Would you like to start your streaming career?";
-            p3.style.display = "none";
+            p2.innerHTML = "Young Tucker decides to browse the internet one day and discovers this really really really cool website called Twitch. He wonders if he should become a streamer.";
+            b2.style.display = "block"
         }
 
         function startTheStream (){
             img.src = "images/startthestream.jpg";
-            p1.innerHTML = "You start your stream and begin your career as a twitch streamer."
-            p2.innerHTML = "Although you had high hopes when you started the stream, nobody joins your stream."
-            p3.innerHTML = "Would you like to continue the stream?"
+            p1.innerHTML = "Tucker decides to start up his stream and begin his career as a twitch streamer."
+            p2.innerHTML = "Tucker is in high spirts as he expected himself to instantly become twitch famous, but nobody joins his stream."
+            p3.innerHTML = "Is Tucker going to continue the stream?"
             b1.innerHTML = "Yes"
             b2.innerHTML = "No"
+            b2.style.display = "block"
         }
 
         function continueStream (){
             img.src = "images/continuestream.jpg";
-            p1.innerHTML = "You continue your stream even when you have no viewers."
-            p2.innerHTML = "Zenals joins your stream."
-            p3.innerHTML = "Would you like to play with him?"
+            p1.innerHTML = "Tucker, feeling defeated, decides to power through and cointinues to stream his favorite game, Rainbow Six Siege."
+            p2.innerHTML = "Tucker encounter a young prodigy gamer who calls himself Zenals while streaming Rainbow Six Siege, and he invites you to play with him."
+            p3.innerHTML = "Is Tucker going to play with Zenals?"
             b1.innerHTML = "Yes"
             b2.innerHTML = "No"
+            b2.style.display = "block"
+        }
+        
+        function gameOverTwo (){
+            img.src = "images/gameover.png";
+            p1.innerHTML = "How could you give up so early?"
+            p2.innerHTML = "With a weak mental like that you will never be famous. You are just a loser who gave up without putting in the effort."
+            p3.innerHTML = "Click button to restart."
+        }
+
+        function playZenals (){
+            img.src = "images/playzenals.jpg";
+            p1.innerHTML = "Tucker decides to play with Zenals"
+            p2.innerHTML = "To Tucker's surprise, Zenals decides to bring ALL of his friends to watch his stream, and Tucker instantly becomes Twitch Affliated. During the stream, one of the viewers donates ONE THOUSAND dollars and asks Tucker to throw Jake the ball."
+            p3.innerHTML = "Is Tucker going to throw Jake the ball?"
+            b1.innerHTML = "Yes, Throw Jake The Ball"
+            b2.innerHTML = "No, Do Not Throw Jake The Ball"
+            b2.style.display = "block"
+        }
+
+        function gameOver (){
+            img.src = "images/gameover.png";
+            p1.innerHTML = "What are you even doing here then?"
+            p2.innerHTML = "Leave, you are failure who gave up before even trying. You will never be a successful streamer."
+            p3.innerHTML = "Click button to restart."
+            b1.innerHTML = "Restart"
+            b2.style.display = "none"
         }
 
         ///State Machine
@@ -160,8 +188,20 @@
                     state = "continueStream";
                 }
                 else if(button == 2){
-                    stopTheStream();
-                    state = "stopTheStream"
+                    gameOverTwo();
+                    state = "gameOverTwo"
+                }
+            }
+            else if(state == "continueStream"){
+                if (button == 1){
+                    playZenals();
+                    state = "playZenals";
+                }
+            }
+            else if(state == "gameOver"){
+                if (button == 1){
+                    intro();
+                    state = "intro";
                 }
             }
         }
