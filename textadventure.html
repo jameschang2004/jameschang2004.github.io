@@ -95,8 +95,6 @@
     <div id="container">
         <div id="left_pane">
             <img id="story_img" src="images/kitten.jpg"/>
-
-
         </div>
         <div id="right_pane">
             <div id="story_text">
@@ -126,7 +124,7 @@
         function intro (){
             img.src = "images/twitch.jpg";
             b1.innerHTML = "Yes, Start The Stream";
-            b2.innerHTML = "No, Do Not Start The Stream";
+            b2.innerHTML = "No, Don't Start The Stream";
             p1.innerHTML = "Welcome to my adventure. Your name is Tucker.";
             p2.innerHTML = "Young Tucker decides to browse the internet one day and discovers this really really really cool website called Twitch. He wonders if he should become a streamer.";
             p3.innerHTML = "Does Tucker want to stream?"
@@ -138,8 +136,8 @@
             p1.innerHTML = "Tucker decides to start up his stream and begin his career as a twitch streamer."
             p2.innerHTML = "Tucker is in high spirts as he expected himself to instantly become twitch famous, but nobody joins his stream."
             p3.innerHTML = "Is Tucker going to continue the stream?"
-            b1.innerHTML = "Yes"
-            b2.innerHTML = "No"
+            b1.innerHTML = "Yes, Continue The Stream"
+            b2.innerHTML = "No, Stop Streaming"
             b2.style.display = "block"
         }
 
@@ -147,7 +145,7 @@
             img.src = "images/gameover.jpg";
             p1.innerHTML = "What are you even doing here then?"
             p2.innerHTML = "Leave, you are failure who gave up before even trying. You will never be a successful streamer."
-            p3.innerHTML = "Click button to restart."
+            p3.innerHTML = "Click Button To Restart"
             b1.innerHTML = "Restart"
             b2.style.display = "none"
         }
@@ -157,8 +155,8 @@
             p1.innerHTML = "Tucker, feeling defeated, decides to power through and cointinues to stream his favorite game, Rainbow Six Siege."
             p2.innerHTML = "Tucker encounter a young prodigy gamer who calls himself Zenals while streaming Rainbow Six Siege, and he invites Tucker to play with him."
             p3.innerHTML = "Is Tucker going to play with Zenals?"
-            b1.innerHTML = "Yes"
-            b2.innerHTML = "No"
+            b1.innerHTML = "Yes, Play With Zenals"
+            b2.innerHTML = "No, Don't Play With Zenals "
             b2.style.display = "block"
         }
         
@@ -166,7 +164,7 @@
             img.src = "images/gameover.jpg";
             p1.innerHTML = "How could you give up so early?"
             p2.innerHTML = "With a weak mental like that you will never be famous. You are just a loser who gave up without putting in the effort."
-            p3.innerHTML = "Click button to restart."
+            p3.innerHTML = "Click Button To Restart"
             b1.innerHTML = "Restart"
             b2.style.display = "none"
         }
@@ -177,7 +175,7 @@
             p2.innerHTML = "To Tucker's surprise, Zenals decides to bring ALL of his friends to watch his stream, and Tucker instantly becomes Twitch Affliated. During the stream, one of the viewers donates ONE THOUSAND dollars and asks Tucker to throw Jake the dog the ball."
             p3.innerHTML = "Is Tucker going to throw Jake the ball?"
             b1.innerHTML = "Yes, Throw Jake The Ball"
-            b2.innerHTML = "No, Do Not Throw Jake The Ball"
+            b2.innerHTML = "No, Don't Throw Jake The Ball"
             b2.style.display = "block"
         }
 
@@ -185,7 +183,7 @@
             img.src = "images/gameover.jpg";
             p1.innerHTML = "Tucker decides not to play with some lame kid called Zenals."
             p2.innerHTML = "Enraged by the fact that you called him lame, Zenals decides to join your bitter rivals Micky's stream, and you are quickly overshadowed falling into irrelevance."
-            p3.innerHTML = "Click button to restart."
+            p3.innerHTML = "Click Button To Restart"
             b1.innerHTML = "Restart"
             b2.style.display = "none"
         }
@@ -202,10 +200,10 @@
         function noBall (){
             img.src = "images/saddog.jpg";
             p1.innerHTML = "Tucker decides to not throw Jake the ball."
-            p2.innerHTML = "Everyone outraged by the fact that Tucker did not throw Jake the ball, and denied Jake happiness went on a massspre of unfollowing."
+            p2.innerHTML = "Everyone outraged by the fact that Tucker did not throw Jake the ball, and denied Jake happiness. Tucker's viewers begins to unfollow him."
             p3.innerHTML = "Your viewers demand an apology, will you give an apology?"
             b1.innerHTML = "Apologize"
-            b2.innerHTML = "Do Not Apologize"
+            b2.innerHTML = "Don't Apologize"
         }
 
         function apologize (){
@@ -234,6 +232,24 @@
             b1.innerHTML = "Be Rude"
             b2.innerHTML = "Be Nice"
             b2.style.display = "block"
+        }
+
+        function beRude (){
+            img.src = "images/gameover.jpg";
+            p1.innerHTML = "Tucker decides to yell at his mother."
+            p2.innerHTML = "Tucker's mother angred by the Tucker's rudeness, shuts off his Internet. Tucker unable to stream quickly fell into irrelevancy, and his streaming career in ruins."
+            p3.innerHTML = "Click Button To Restart"
+            b1.innerHTML = "Restart"
+            b2.style.display = "none"
+        }
+
+        function beNice (){
+            img.src = "images/win.jpg";
+            p1.innerHTML = "Tucker decides to hype his mother up."
+            p2.innerHTML = "Tucker's being the good son that he is encourages his mother. The Twitch community respecting Tucker's decision crowns him the King of Twitch. Tucker becomes the legendary twitch streamer and lives the rest of his life in paradise."
+            p3.innerHTML = "Click Button To Replay"
+            b1.innerHTML = "Replay"
+            b2.style.display = "none"
         }
 
         
@@ -277,7 +293,7 @@
                     playZenals();
                     state = "playZenals";
                 }
-                if (button == 2){
+                else if (button == 2){
                     noZenals();
                     state = "noZenals";
                 }
@@ -293,7 +309,7 @@
                     yesBall();
                     state = "yesBall";
                 }
-                if (button == 2){
+                else if (button == 2){
                     noBall();
                     state = "noBall";
                 }
@@ -303,9 +319,15 @@
                     apologize();
                     state = "apologize";
                 }
-                if (button == 2){
+                else if (button == 2){
                     noApology()
                     state = "noApology"
+                }
+            }
+            else if(state == "noApology"){
+                if (button == 1){
+                    intro();
+                    state = "intro";
                 }
             }
             else if(state == "yesBall"){
@@ -319,6 +341,26 @@
                     momEnters();
                     state = "momEnters";
                 }
+            }
+            else if(state == "momEnters"){
+                if (button == 1){
+                    beRude();
+                    state = "beRude";
+                }
+                else if (button == 2){
+                    beNice();
+                    state = "beNice";
+                }
+            }
+            else if(state == "beRude")
+            if (button == 1){
+                intro();
+                state = "intro";
+            }
+            else if(state == "beNice")
+            if (button == 1){
+                intro();
+                state = "intro";
             }
         }
 
