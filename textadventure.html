@@ -134,7 +134,7 @@
         function startTheStream (){
             img.src = "images/startthestream.jpg";
             p1.innerHTML = "Tucker decides to start up his stream and begin his career as a twitch streamer."
-            p2.innerHTML = "Tucker is in high spirts as he expected himself to instantly become twitch famous, but nobody joins his stream."
+            p2.innerHTML = "Tucker is in high spirts as he expected himself to instantly become twitch famous, but nobody joins his stream and he becomes extreamly depressed. Tucker begins to question his decisions."
             p3.innerHTML = "Is Tucker going to continue the stream?"
             b1.innerHTML = "Yes, Continue The Stream"
             b2.innerHTML = "No, Stop Streaming"
@@ -144,7 +144,7 @@
         function gameOver (){
             img.src = "images/gameover.jpg";
             p1.innerHTML = "What are you even doing here then?"
-            p2.innerHTML = "Leave, you are failure who gave up before even trying. You will never be a successful streamer."
+            p2.innerHTML = "Leave, you are failure who gave up before even trying. How will you be successful in life if you just give up on all your dreams. You will forever be a loser who will never succeed."
             p3.innerHTML = "Click Button To Restart"
             b1.innerHTML = "Restart"
             b2.style.display = "none"
@@ -163,7 +163,7 @@
         function gameOverTwo (){
             img.src = "images/gameover.jpg";
             p1.innerHTML = "How could you give up so early?"
-            p2.innerHTML = "With a weak mental like that you will never be famous. You are just a loser who gave up without putting in the effort."
+            p2.innerHTML = "With a weak mental like that you will never be famous. You are just a loser who gave up without putting in the effort. You are actually the world's worst streamer."
             p3.innerHTML = "Click Button To Restart"
             b1.innerHTML = "Restart"
             b2.style.display = "none"
@@ -352,15 +352,17 @@
                     state = "beNice";
                 }
             }
-            else if(state == "beRude")
-            if (button == 1){
-                intro();
-                state = "intro";
+            else if(state == "beRude"){
+                if (button == 1){
+                    intro();
+                    state = "intro";
+                }
             }
-            else if(state == "beNice")
-            if (button == 1){
-                intro();
-                state = "intro";
+            else if(state == "beNice"){
+                if (button == 1){
+                    intro();
+                    state = "intro";
+                }
             }
         }
 
