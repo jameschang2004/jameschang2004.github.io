@@ -3,75 +3,7 @@
     <head>
         <title>Text Adventure</title>
         <link rel="stylesheet" type="text/css" href="css/navbar.css" />
-        <style>
-        body {
-            background-color: #30302f;
-        }
-	    #container {
-                position: absolute;
-                left: 0px;
-                right: 0px;
-                top: 90px;
-                bottom: 0px;
-                background-color: red;
-            }
-
-            #left_pane {
-                background-color: green;
-                height: 100%;
-                width: 56%;
-                float: left;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            #right_pane {
-                background-color: blue;
-                height: 100%;
-                width: 44%;
-                float: right;
-            }
-
-            #story_text {
-                background-color: LightYellow;
-                height: 100%;
-                color: black;
-                font-weight: bold;
-                position: absolute;
-            }
-
-            #button_choices{
-                position: absolute;
-                bottom: 0px;
-                left: 56%;
-                right:0px;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: LightSkyBlue;
-            }
-
-            #story_img {
-                max-height:100%;
-                max-width:100%;
-                width:100%;
-                height:100%;
-            }
-
-            .buttons {
-                text-decoration: none;
-                color: white;
-                background-color: black;
-                padding: 10px;
-                border-radius: 8px;
-                font-size: 16px;
-                margin: 10px;
-            }
-
-        
-        </style>
+        <link rel="stylesheet" type="text/css" href="css/textadventure.css" />
     </head>
     <body>
 
@@ -126,7 +58,7 @@
             b1.innerHTML = "Yes, Start The Stream";
             b2.innerHTML = "No, Don't Start The Stream";
             p1.innerHTML = "Welcome to my adventure. Your name is Tucker.";
-            p2.innerHTML = "Young Tucker decides to browse the internet one day and discovers this extreamly interesting and cool website called Twitch. He wonders if he should become a streamer.";
+            p2.innerHTML = "Young Tucker decides to browse the Internet one day and discovers this extreamly interesting and cool website called Twitch. He wonders if he should become a streamer.";
             p3.innerHTML = "Does Tucker want to stream?"
             b2.style.display = "block"
         }
@@ -227,7 +159,7 @@
         function momEnters (){
             img.src = "images/facepalm.jpg";
             p1.innerHTML = "Tucker's mom enters his room in order to celebrate Tucker's recent achivement of becoming a Twitch Partner."
-            p2.innerHTML = "Tucker's mom embarrass him terribly in front of the stream as she did the gangnam style and fell in front of the camera."
+            p2.innerHTML = "Tucker's mom embarrassed him terribly in front of the stream as she did the gangnam style and falls in front of the camera hurting herself."
             p3.innerHTML = "Will you be rude to your mom or nice to your mom while asking her to leave your room?"
             b1.innerHTML = "Be Rude"
             b2.innerHTML = "Be Nice"
@@ -237,7 +169,7 @@
         function beRude (){
             img.src = "images/gameover.jpg";
             p1.innerHTML = "Tucker decides to yell at his mother."
-            p2.innerHTML = "Tucker's mother angred by the Tucker's rudeness, shuts off his Internet. Tucker unable to stream quickly fell into irrelevancy, and his streaming career in ruins."
+            p2.innerHTML = "Tucker's mother angred by the Tucker's rudeness, shuts off his internet. Tucker unable to stream quickly fell into irrelevancy, and his streaming career in ruins."
             p3.innerHTML = "Click Button To Restart"
             b1.innerHTML = "Restart"
             b2.style.display = "none"
@@ -245,8 +177,8 @@
 
         function beNice (){
             img.src = "images/win.jpg";
-            p1.innerHTML = "Tucker decides to hype his mother up."
-            p2.innerHTML = "Tucker's being the good son that he is encourages his mother. The Twitch community respecting Tucker's decision crowns him the King of Twitch. Tucker becomes the legendary twitch streamer and lives the rest of his life in paradise."
+            p1.innerHTML = "Tucker decides to help his mother up."
+            p2.innerHTML = "Tucker being the good son that he is encourages his mother. The Twitch community respecting Tucker's decision crowns him the King of Twitch. Tucker becomes the legendary twitch streamer and lives the rest of his life in paradise."
             p3.innerHTML = "Click Button To Replay"
             b1.innerHTML = "Replay"
             b2.style.display = "none"
