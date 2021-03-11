@@ -6,7 +6,6 @@
         <link rel="stylesheet" type="text/css" href="css/textadventurepython.css" />
     </head>
     <body>
-
         <ul class="navbar">
             <li><a href="index.html">Home</a></li>
             <li><a href="resume.html">Resume</a></li>
@@ -23,6 +22,21 @@
                 </ul>
             </li>
         </ul>  
-        <iframe height="400px" width="100%" src="https://repl.it/@jameschang2004/rsa-project-jameschang2004?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+        <iframe height="835px" width="100%" src="https://repl.it/@jameschang2004/rsa-project-jameschang2004?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+        <video width="320" height="240" controls>
+            <source src="videos/rsaencryption.mp4" type="video/mp4">
+        </video>
+        <p>
+            The purpose of the program is to encrypt and decrypt messages. The program is able to encrypt and decrypt messages using a public and private key. The message inputted in the encrypted section outputs an encrypted message if given the proper e and n value. THe input of an encrypted message in the decryption section will output the decrypted message if given the corresponding d and n value.
+        </p>
+        <img src="images/encryptioncode.png">
+        <img src="images/encryptbutton.png">
+        <p>
+            The encrypt function takes the value of n and e which is acquired by the encryptButton function and encrypts a message inputted by the user into a message box. The encrypted message will then replace the original message in the message box for the user to see. 
+        </p>
+        <p>
+            You will first need to write a function which will grap two integer values inputted by the user in the program interface and it should include a call to run the actual encryption function once a button is pressed. The actual encryption function will need to grab a message inputted by the user in the program interface and numerize it using the two values acquired in the previous function. Then the numerized message needs to be characterized and returned to the user by inserting it into a message box.
+        </p>
     </body>
 </html>
